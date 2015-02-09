@@ -19,7 +19,7 @@
     DXDetailViewController *viewController = [DXDetailViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
-    
+    viewController.title = @"My Life";
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

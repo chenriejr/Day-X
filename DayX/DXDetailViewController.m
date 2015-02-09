@@ -10,6 +10,9 @@
 
 @interface DXDetailViewController () <UITextFieldDelegate, UITextViewDelegate>
 
+@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UITextView *textView;
+
 @end
 
 static CGFloat margin = 20;
@@ -26,23 +29,22 @@ static CGFloat formatSpace = 20;
     
     
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(margin, topMargin, self.view.bounds.size.width - margin * 2, titleHeight)];
-    textField.backgroundColor = [UIColor lightGrayColor];
-    textField.placeholder = @"Journal Title Here";
-    textField.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.delegate = self;
-    [self.view addSubview:textField];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(margin, topMargin, self.view.bounds.size.width - margin * 2, titleHeight)];
+    self.textField.backgroundColor = [UIColor lightGrayColor];
+    self.textField.placeholder = @"Journal Title Here";
+    self.textField.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    self.textField.borderStyle = UITextBorderStyleRoundedRect;
+    self.textField.delegate = self;
+    [self.view addSubview:self.textField];
     
     CGFloat top = topMargin + titleHeight + formatSpace;
     
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(margin, top, self.view.bounds.size.width - margin * 2, bodyHeight)];
-    textView.layer.borderWidth = 2;
-    textView.layer.cornerRadius = 10;
-    textView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-   // textView.layer.description = @"Journal Entry Here";
-    textView.delegate = self;
-    [self.view addSubview:textView];
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(margin, top, self.view.bounds.size.width - margin * 2, bodyHeight)];
+    self.textView.layer.borderWidth = 2;
+    self.textView.layer.cornerRadius = 10;
+    self.textView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.textView.delegate = self;
+    [self.view addSubview:self.textView];
     
     top += bodyHeight + formatSpace;
     
@@ -50,6 +52,7 @@ static CGFloat formatSpace = 20;
     clearAll.backgroundColor = [UIColor redColor];
     [clearAll setTitle:@"Clear All" forState:UIControlStateNormal];
     clearAll.layer.cornerRadius = 10;
+    [clearAll addTarget:self action:@selector(clearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:clearAll];
     
     
@@ -60,11 +63,16 @@ static CGFloat formatSpace = 20;
     return YES;
 }
 
-- (BOOL)buttonWasTapped (id)
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)clearButtonPressed {
+    self.textField.text = @"";
+    self.textView.text = @"";
 }
 
 /*
