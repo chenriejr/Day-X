@@ -29,11 +29,20 @@
     self.journalEntry.text = @"";
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self.journalTitle resignFirstResponder];
-    return YES;
-}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    [self.journalTitle resignFirstResponder];
+//    return YES;
+//}
 
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [self.journalTitle resignFirstResponder];
+//    [super viewWillDisappear:animated];
+//}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.journalEntry resignFirstResponder];
+    [self.journalTitle resignFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
