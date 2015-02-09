@@ -8,6 +8,7 @@
 
 #import "DXAppDelegate.h"
 #import "DXDetailViewController.h"
+#import "DetailViewController.h"
 
 @implementation DXAppDelegate
 
@@ -20,6 +21,11 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
     viewController.title = @"My Life";
+    
+    DetailViewController *detailViewController = [DetailViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    self.window.rootViewController = navController;
+    detailViewController.title = @"My Journal";
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
