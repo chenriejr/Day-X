@@ -22,6 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.journalEntry.layer.borderWidth = 2;
+    self.journalEntry.layer.borderColor = [[UIColor grayColor] CGColor];
+    
 }
 
 - (IBAction)clearAllPressed:(id)sender {
@@ -29,15 +32,11 @@
     self.journalEntry.text = @"";
 }
 
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-//    [self.journalTitle resignFirstResponder];
-//    return YES;
-//}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.journalTitle resignFirstResponder];
+    return YES;
+}
 
-//- (void)viewWillDisappear:(BOOL)animated {
-//    [self.journalTitle resignFirstResponder];
-//    [super viewWillDisappear:animated];
-//}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.journalEntry resignFirstResponder];
