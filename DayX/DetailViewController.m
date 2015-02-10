@@ -25,6 +25,7 @@
     self.journalEntry.layer.borderWidth = 2;
     self.journalEntry.layer.borderColor = [[UIColor grayColor] CGColor];
     
+    
     NSDictionary *novelist = [[NSUserDefaults standardUserDefaults] objectForKey:@"novelist"];
     [self updateJournalDictionary:novelist];
     
@@ -38,6 +39,10 @@
 - (void)updateJournalDictionary:(NSDictionary *) novelist {
     self.journalTitle.text = novelist[@"titleKey"];
     self.journalEntry.text = novelist[@"entryKey"];
+    
+    NSDate *date = [NSDate date];
+    [[NSUserDefaults standardUserDefaults] setObject:date forKey:@"date"];
+    
 }
 
 - (IBAction)saveButton:(id)sender {
