@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
     self.journalEntry.layer.borderWidth = 2;
     self.journalEntry.layer.borderColor = [[UIColor grayColor] CGColor];
     
@@ -37,6 +38,13 @@
     return YES;
 }
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    if (textView.tag == 0) {
+        textView.text = @"";
+        textView.tag = 1;
+    }
+    return YES;
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.journalEntry resignFirstResponder];
