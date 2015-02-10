@@ -22,9 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
     self.journalEntry.layer.borderWidth = 2;
     self.journalEntry.layer.borderColor = [[UIColor grayColor] CGColor];
+    
+    NSDictionary *novelist = [[NSUserDefaults standardUserDefaults] objectForKey:@"novelist"];
+    [self updateJournalDictionary:novelist];
     
 }
 
@@ -32,6 +34,24 @@
     self.journalTitle.text = @"";
     self.journalEntry.text = @"";
 }
+
+- (void)updateJournalDictionary:(NSDictionary *) novelist {
+    self.journalTitle.text = novelist[@"titleKey"];
+    self.journalEntry.text = novelist[@"entryKey"];
+}
+
+- (IBAction)saveButton:(id)sender {
+    NSMutableDictionary *journalDictionary = [NSMutableDictionary new];
+    
+    journalDictionary[@"titleKey"] = self.journalTitle.text;
+    journalDictionary[@"entryKey"] = self.journalEntry.text;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:journalDictionary forKey:@"novelist"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.journalTitle resignFirstResponder];

@@ -17,11 +17,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    DXDetailViewController *viewController = [DXDetailViewController new];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = navigationController;
-    viewController.title = @"My Life";
+    // Made by code
+//    DXDetailViewController *viewController = [DXDetailViewController new];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    self.window.rootViewController = navigationController;
+//    viewController.title = @"My Life";
     
+    // Made using Interface Builder
     DetailViewController *detailViewController = [DetailViewController new];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     self.window.rootViewController = navController;
