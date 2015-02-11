@@ -16,13 +16,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [[DXEntryModel sharedInstance].entries count];
+    NSArray *entries = [DXEntryModel loadEntriesFromDefaults];
+    return entries.count;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSArray *entries = [DXEntryModel loadEntriesFromDefaults];
+    DXEntryModel *entry = entries[indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    cell.textLabel.text = entry.title;
+    return cell;
 }
 
 
