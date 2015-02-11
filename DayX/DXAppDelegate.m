@@ -9,6 +9,7 @@
 #import "DXAppDelegate.h"
 #import "DXDetailViewController.h"
 #import "DetailViewController.h"
+#import "DXListViewController.h"
 
 @implementation DXAppDelegate
 
@@ -24,10 +25,10 @@
 //    viewController.title = @"My Life";
     
     // Made using Interface Builder
-    DetailViewController *detailViewController = [DetailViewController new];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    DXListViewController *listViewController = [DXListViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:listViewController];
     self.window.rootViewController = navController;
-    detailViewController.title = @"My Journal";
+    listViewController.title = @"My Journal";
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

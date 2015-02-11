@@ -18,8 +18,8 @@
 - (NSDictionary *)entryDictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
-+ (NSMutableArray*)loadEntriesFromDefaults;
-+ (void)storeEntriesInDefaults:(NSArray *)entries;
+//+ (NSMutableArray*)loadEntriesFromDefaults;
+//+ (void)storeEntriesInDefaults:(NSArray *)entries;
 
 
 @end

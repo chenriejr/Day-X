@@ -9,6 +9,7 @@
 #import "DXListViewController.h"
 #import "ListTableViewDataSource.h"
 #import "DXDetailViewController.h"
+#import "DetailViewController.h"
 
 @interface DXListViewController () <UITableViewDelegate>
 
@@ -33,7 +34,7 @@
     self.tableView.delegate = self;
     [self.dataSource registerTableView:self.tableView];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(add:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(add)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     
@@ -45,6 +46,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)add {
+    
+    DetailViewController *detailViewController = [DetailViewController new];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+
+}
 
 
 - (void)didReceiveMemoryWarning {

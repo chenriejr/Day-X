@@ -19,6 +19,12 @@
 		711A508519388096005642EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711A506D19388095005642EF /* UIKit.framework */; };
 		711A508D19388096005642EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 711A508B19388096005642EF /* InfoPlist.strings */; };
 		711A508F19388096005642EF /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 711A508E19388096005642EF /* DayXTests.m */; };
+		FF20B2BD1A8C0061004B3BA9 /* DXListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF20B2BC1A8C0061004B3BA9 /* DXListViewController.m */; };
+		FFC9ED621A89548F001C7A18 /* DXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC9ED611A89548F001C7A18 /* DXDetailViewController.m */; };
+		FFC9ED661A8970DF001C7A18 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC9ED641A8970DF001C7A18 /* DetailViewController.m */; };
+		FFC9ED671A8970DF001C7A18 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC9ED651A8970DF001C7A18 /* DetailViewController.xib */; };
+		FFC9EE031A8ABF1F001C7A18 /* DXEntryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC9EE021A8ABF1F001C7A18 /* DXEntryModel.m */; };
+		FFC9EE061A8AE287001C7A18 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC9EE051A8AE287001C7A18 /* ListTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,17 @@
 		711A508A19388096005642EF /* DayXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayXTests-Info.plist"; sourceTree = "<group>"; };
 		711A508C19388096005642EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		711A508E19388096005642EF /* DayXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayXTests.m; sourceTree = "<group>"; };
+		FF20B2BB1A8C0061004B3BA9 /* DXListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXListViewController.h; sourceTree = "<group>"; };
+		FF20B2BC1A8C0061004B3BA9 /* DXListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXListViewController.m; sourceTree = "<group>"; };
+		FFC9ED601A89548F001C7A18 /* DXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXDetailViewController.h; sourceTree = "<group>"; };
+		FFC9ED611A89548F001C7A18 /* DXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXDetailViewController.m; sourceTree = "<group>"; };
+		FFC9ED631A8970DF001C7A18 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FFC9ED641A8970DF001C7A18 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FFC9ED651A8970DF001C7A18 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		FFC9EE011A8ABF1F001C7A18 /* DXEntryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXEntryModel.h; sourceTree = "<group>"; };
+		FFC9EE021A8ABF1F001C7A18 /* DXEntryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXEntryModel.m; sourceTree = "<group>"; };
+		FFC9EE041A8AE287001C7A18 /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
+		FFC9EE051A8AE287001C7A18 /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +126,15 @@
 			children = (
 				711A507819388095005642EF /* DXAppDelegate.h */,
 				711A507919388095005642EF /* DXAppDelegate.m */,
+				FF20B2BF1A8C0165004B3BA9 /* VC by Code */,
+				FF20B2C01A8C0192004B3BA9 /* VC by Interface Builder */,
+				FFC9EE041A8AE287001C7A18 /* ListTableViewDataSource.h */,
+				FFC9EE051A8AE287001C7A18 /* ListTableViewDataSource.m */,
+				FF20B2BB1A8C0061004B3BA9 /* DXListViewController.h */,
+				FF20B2BC1A8C0061004B3BA9 /* DXListViewController.m */,
+				FFC9EE011A8ABF1F001C7A18 /* DXEntryModel.h */,
+				FFC9EE021A8ABF1F001C7A18 /* DXEntryModel.m */,
+				FFC9ED651A8970DF001C7A18 /* DetailViewController.xib */,
 				711A507B19388095005642EF /* Images.xcassets */,
 				711A507019388095005642EF /* Supporting Files */,
 			);
@@ -142,6 +168,24 @@
 				711A508B19388096005642EF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF20B2BF1A8C0165004B3BA9 /* VC by Code */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9ED601A89548F001C7A18 /* DXDetailViewController.h */,
+				FFC9ED611A89548F001C7A18 /* DXDetailViewController.m */,
+			);
+			name = "VC by Code";
+			sourceTree = "<group>";
+		};
+		FF20B2C01A8C0192004B3BA9 /* VC by Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9ED631A8970DF001C7A18 /* DetailViewController.h */,
+				FFC9ED641A8970DF001C7A18 /* DetailViewController.m */,
+			);
+			name = "VC by Interface Builder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				711A507419388095005642EF /* InfoPlist.strings in Resources */,
+				FFC9ED671A8970DF001C7A18 /* DetailViewController.xib in Resources */,
 				711A507C19388095005642EF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC9EE061A8AE287001C7A18 /* ListTableViewDataSource.m in Sources */,
+				FF20B2BD1A8C0061004B3BA9 /* DXListViewController.m in Sources */,
 				711A507A19388095005642EF /* DXAppDelegate.m in Sources */,
 				711A507619388095005642EF /* main.m in Sources */,
+				FFC9EE031A8ABF1F001C7A18 /* DXEntryModel.m in Sources */,
+				FFC9ED621A89548F001C7A18 /* DXDetailViewController.m in Sources */,
+				FFC9ED661A8970DF001C7A18 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +488,7 @@
 				711A509419388096005642EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		711A509519388096005642EF /* Build configuration list for PBXNativeTarget "DayXTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +497,7 @@
 				711A509719388096005642EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

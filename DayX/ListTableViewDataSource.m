@@ -11,7 +11,10 @@
 
 @implementation ListTableViewDataSource
 
-
+-(void)registerTableView:(UITableView *)tableView
+{
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -27,7 +30,7 @@
     NSArray *entries = [DXEntryModel loadEntriesFromDefaults];
     DXEntryModel *entry = entries[indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.textLabel.text = entry.title;
     return cell;
 }
