@@ -33,9 +33,17 @@
     self.tableView.delegate = self;
     [self.dataSource registerTableView:self.tableView];
     
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(add:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
     
     
 }
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
