@@ -12,6 +12,14 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic, strong) NSDate *timestamp;
+@property (nonatomic, assign) NSDate *timestamp;
+
+
+- (NSDictionary *)entryDictionary;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
++ (NSMutableArray*)loadEntriesFromDefaults;
++ (void)storeEntriesInDefaults:(NSArray *)entries;
+
 
 @end
